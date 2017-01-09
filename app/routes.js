@@ -1,5 +1,6 @@
 //require express
 var express = require('express');
+var path = require('path');
 
 //create router object
 var router = express.Router();
@@ -9,7 +10,7 @@ module.exports = router;
 
 //route for home
 router.get('/',function(req,res){
-  res.send('Hello, World');
+  res.sendFile(path.join(__dirname, '../index.html'));
 });
 
 //route for about
