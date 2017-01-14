@@ -10,14 +10,18 @@ module.exports = router;
 
 //route for home
 router.get('/',function(req,res){
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.render('pages/index.ejs');
 });
 
 //route for about
 router.get('/about', function(req,res){
-  res.sendFile(path.join(__dirname,'../about.html'));
+  res.render('pages/about.ejs');
 });
 
 //routes for contact
-router.get('/contact');
-router.post('/contact');
+router.get('/contact', function(req,res){
+    res.render('pages/contact.ejs');
+});
+router.post('/contact', function(req,res){
+    res.render('pages/contact.ejs');
+});

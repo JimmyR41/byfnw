@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
+
     <header>
       <nav class="navbar navbar-inverse">
         <a href="/" class="navbar-brand">My Site</a>
@@ -18,23 +19,15 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h2>Welcome to the site</h2>
-        <p>The best place to be</p>
-
-        <a class="btn btn-primary btn-lg" href="/">Get Started</a>
-        <a class="btn btn-primary btn-lg" href="/contact">Contact</a>
-      </div>
-    </section>
+    <!--define main content -->
+    <%- defineContent('hero') %>
 
     <main>
       <div class="container">
-        <div class="jumbotron text-center">
-          Home Page
-        </div>
+        <%- body %>
       </div>
     </main>
+
 
     <footer>
       Awesome Site. Copyright &copy;2017
