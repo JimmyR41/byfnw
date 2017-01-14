@@ -2,7 +2,7 @@
 var express = require('express');
 var app = express();
 var expresslayouts = require('express-ejs-layouts');
-var port = 8080;
+var port = process.env.PORT || 8080;
 
 //set view engine use expresslayouts
 app.set('view engine', 'ejs');
