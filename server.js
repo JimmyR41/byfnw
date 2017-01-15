@@ -1,15 +1,14 @@
-//require our dependencies
+//set requirements
 var express = require('express');
 var app = express();
-var expresslayouts = require('express-ejs-layouts');
-//dont forrget tos set port for deployment
+var expressLayouts = require('express-ejs-layouts');
 var port = process.env.PORT || 8080;
 
-//set view engine use expresslayouts
+//set and use view engine
 app.set('view engine', 'ejs');
-app.use(expresslayouts);
+app.use(expressLayouts);
 
-//route our app
+//import router object and use router
 var router = require('./app/routes');
 app.use('/', router);
 

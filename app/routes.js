@@ -1,27 +1,25 @@
-//require express
+//set requirements
 var express = require('express');
 var path = require('path');
 
-//create router object
-var router = express.Router();
 
-//export our router
+//create and export router object
+var router = express.Router();
 module.exports = router;
 
-//route for home
-router.get('/',function(req,res){
-  res.render('pages/index.ejs');
+//set routes
+router.get('/', function(req,res){
+  res.render('pages/index');
 });
 
-//route for about
 router.get('/about', function(req,res){
-  res.render('pages/about.ejs');
+  res.render('pages/about');
 });
 
-//routes for contact
 router.get('/contact', function(req,res){
-    res.render('pages/contact.ejs');
+  res.render('pages/contact');
 });
+
 router.post('/contact', function(req,res){
-    res.render('pages/contact.ejs');
+
 });
