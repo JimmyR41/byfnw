@@ -2,21 +2,28 @@
 <div class="jumbotron text-center">
   <h1>Contact Page</h1>
 
-<br>
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <h2>Contact Us!</h2>
+          <p>Lorem ipsum dolor sit amet, pro ne minim conclusionemque, his nihil audire sapientem cu. Agam graeci euripidis est in, appetere nominati mel ei. Ubique vocent has ut, no duo eirmod sententiae, etiam integre no pri.</p>
 
-  <form class="form-horizontal" action="/contact.ejs" method="post">
-    <div class="form-group">
-      <label for="username" class="col-sm-2 control-label">Username:</label>
-      <input type="text" name="username" placeholder="John Doe">
-
-    </div>
-    <div class="form-group">
-      <label for="email" class="col-sm-2 control-label">Email:</label>
-      <input type="email" name="email" placeholder="john@email.com">
-    </div>
-    <textarea name="questions" rows="5" cols="80"></textarea>
-    <br><br>
-    <button type="submit" class="btn btn-primary "name="button">Submit</button>
-  </form>
-
+          <form action="/contact" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" name="name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <input type="text" name="message" class="form-control">
+            </div>
+            <div class="form-group-right">
+              <button type="submit" class="btn btn-lg btn-primary" name="button">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
 </div>
