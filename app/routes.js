@@ -13,7 +13,13 @@ router.get('/', function(req,res){
 });
 
 router.get('/about', function(req,res){
-  res.render('pages/about');
+  var users = [
+    {name: 'Holly', email: 'holly@scotch.io', avatar: 'http://placekitten.com/700/700'},
+    {name: 'Chris', email: 'chris@scotch.io', avatar: 'http://placekitten.com/800/800'},
+    {name: 'Ado', email: 'ado@scotch.io', avatar: 'http://placekitten.com/600/600'},
+    {name: 'Nick', email: 'nick@scotch.io', avatar: 'http://placekitten.com/700/700'}
+  ];
+  res.render('pages/about', { users: users });
 });
 
 router.get('/contact', function(req,res){
